@@ -25,11 +25,16 @@
                                 <RowDefinition Height="530"/>
                                 <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Image Source="/Images/accountfansys.png" 
+                        <Image Grid.Column="0" Grid.Row="0"
+                               Width="80"
+                               Height="60"
+                               Source="/Images/accountfansys.png" 
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"
                                Margin="20,0,0,0"
-                               />
+                               Stretch="Uniform" 
+                        />
+                        
                         <TextBlock Text="AccountFanSys"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Left"
