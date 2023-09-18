@@ -9,10 +9,7 @@
 
     <ItemGroup>
       <Folder Include="Fonts\" />
-      <Folder Include="Images\" />
-      <Folder Include="MVM\ModelView\" />
       <Folder Include="MVM\Model\" />
-      <Folder Include="MVM\View\" />
     </ItemGroup>
 
 </Project>
