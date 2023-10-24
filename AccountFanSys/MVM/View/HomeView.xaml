@@ -9,11 +9,25 @@
              d:DesignHeight="530" d:DesignWidth="940"
              Background="Transparent">
     
+    
     <Grid Margin="20,20,20,20">
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="250"/>
         <ColumnDefinition/>
     </Grid.ColumnDefinitions>
+        
+        <Popup x:Name="UtilidadPopup" IsOpen="False" Placement="Center" PlacementTarget="{Binding ElementName=UtilidadButton}" StaysOpen="False">
+            <Border Background="White" BorderBrush="Black" BorderThickness="1" CornerRadius="5">
+                <StackPanel>
+                    <TextBlock Text="Utilidad" HorizontalAlignment="Center" Margin="10" FontSize="16" />
+                    <TextBox x:Name="UtilidadInput" Width="200" Height="30" Margin="10" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Guardar" Width="80" Height="30" Margin="10" Click="GuardarUtilidad_Click" />
+                        <Button Content="Cancelar" Width="80" Height="30" Margin="10" Click="CancelarUtilidad_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Popup>
     <StackPanel >
         <TextBox Width="171"
                  Height="40"
@@ -32,12 +46,115 @@
                   Grid.Row="2"
                   Grid.Column="0" Grid.ColumnSpan="2"
         />
+        
+        <Button Content="Nuevo Registro" Height="50px" Width="120px" Margin="0, 50,0,0">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="LightBlue" BorderBrush="DarkBlue" BorderThickness="1" CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        
+        <Button Content="Nueva Venta" Height="30px" Width="120px" Margin="0, 40,0,0">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="LightBlue" BorderBrush="DarkBlue" BorderThickness="1" CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
     </StackPanel>
         
+       
         <StackPanel Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Stretch"  Height="250px">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Factura" Binding="{Binding Factura}" Width="*" />
+                        <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa}" Width="*" />
+                        <DataGridTextColumn Header="Compras" Binding="{Binding Compras}" Width="*" />
+                        <DataGridTextColumn Header="Devolución" Binding="{Binding Devolucion}" Width="*" />
+                        <DataGridTextColumn Header="Concepto" Binding="{Binding Concepto}" Width="*" />
+                        <DataGridTextColumn Header="Gastos" Binding="{Binding Gastos}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Grid Grid.Row="1" Height="30px" Margin="0,-40,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Total Venta" Grid.Column="0" Margin="10,0,0,0"/>
+                    <TextBlock Text="{Binding TotalVenta}" Grid.Column="1" />
+                    <TextBlock Text="Total Compra" Grid.Column="1" Margin="10,0,0,0"/>
+                    <TextBlock Text="{Binding TotalCompra}" Grid.Column="3" />
+                    <TextBlock Text="Total Gasto" Grid.Column="2" Margin="10,0,0,0"/>
+                    <TextBlock Text="{Binding TotalGasto}" Grid.Column="5" />
+                </Grid>
+            </Grid>
+            
+            <StackPanel Grid.Row="1" Background="LightGray" Margin="200,20,0,0">
+                
+                <TextBlock  Background="SteelBlue" Margin="-90,0,0,0" Height="25" FontSize="16" 
+                            Padding="10,0,0,0"
+                            Text="Total del Mes" />
+                <!-- Totales mensuales -->
+                <TextBlock Padding="10,0,0,0" Margin="0,5,0,5" Text="Total Venta: {Binding TotalVentaMes}" />
+                <TextBlock Padding="10,0,0,0" Margin="0,5,0,5" Text="Total Compra: {Binding TotalCompraMes}" />
+                <TextBlock Padding="10,0,0,0" Margin="0,5,0,5" Text="Total Gasto: {Binding TotalGastoMes}" />
+            </StackPanel>
+            
+            <StackPanel Grid.Row="1" Background="LightGray" Margin="0,20,0,0" HorizontalAlignment="Left" Width="250px">
+                
+                <TextBlock  Background="LightSteelBlue" Margin="0,0,0,0" Height="20" FontSize="12" 
+                            Padding="10,0,0,0" 
+                            Text="Total del día anterior (00/00/0000)" />
+                <!-- Totales del día anterior -->
+                <TextBlock Padding="10,0,0,0" Margin="0,5,0,5" FontSize="10" Text="Total Venta: {Binding TotalVentaMes}" />
+                <TextBlock Padding="10,0,0,0" Margin="0,5,0,5" FontSize="10" Text="Total Compra: {Binding TotalCompraMes}" />
+                <TextBlock Padding="10,0,0,0" Margin="0,5,0,5" FontSize="10" Text="Total Gasto: {Binding TotalGastoMes}" />
+                
+            </StackPanel>
+            
+            <StackPanel Grid.Row="1" Background="Transparent" Margin="350,-50,0,0" HorizontalAlignment="Left" Width="300px">
+                
+                <Button  HorizontalAlignment="Left" Margin="40,15,0,0" Name="UtilidadButton" Click="UtilidadButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/../Images/configuraciones.png" Width="24" Height="24"/>
+                    </StackPanel>
+                </Button>
+                
+                <TextBlock Padding="90,0,0,0" Margin="0,-25,0,5" FontSize="16" Foreground="White" Text="Utilidad: {Binding Utilidad}" />
+                
+            </StackPanel>
+            
             
             
         </StackPanel>
         
     </Grid>
+    
+    
+    
 </UserControl>
