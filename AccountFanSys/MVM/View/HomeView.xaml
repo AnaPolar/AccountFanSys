@@ -34,7 +34,10 @@
         />
     </StackPanel>
         
-        <StackPanel Grid.Column="1"></StackPanel>
+        <StackPanel Grid.Column="1">
+            
+            
+        </StackPanel>
         
     </Grid>
 </UserControl>

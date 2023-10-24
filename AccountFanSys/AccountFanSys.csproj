@@ -12,4 +12,9 @@
       <Folder Include="MVM\Model\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Images\accountfansys.png" />
+      <Resource Include="Images\accountfansys.png" />
+    </ItemGroup>
+
 </Project>

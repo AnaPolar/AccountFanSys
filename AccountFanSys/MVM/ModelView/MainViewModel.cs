@@ -6,9 +6,11 @@ public class MainViewModel : ObservableObject
 {
     public RelayCommand HomeViewCommand { get; set; }
     public RelayCommand AccountViewCommand { get; set; }
+    public RelayCommand CatalogViewCommand { get; set; }
     
     public HomeViewModel HomeVm { get; set; }
     public AccountViewModel AccountVm { get; set; }
+    public CatalogViewModel CatalogVm { get; set; }
     
     private object _currentView;
     
@@ -26,6 +28,7 @@ public class MainViewModel : ObservableObject
     {
         HomeVm = new HomeViewModel();
         AccountVm = new AccountViewModel();
+        CatalogVm = new CatalogViewModel();
         
         CurrentView = HomeVm;
 
@@ -37,6 +40,11 @@ public class MainViewModel : ObservableObject
         AccountViewCommand = new RelayCommand(o =>
         {
             CurrentView = AccountVm;
+        });
+        
+        CatalogViewCommand = new RelayCommand(o =>
+        {
+            CurrentView = CatalogVm;
         });
     }
 }

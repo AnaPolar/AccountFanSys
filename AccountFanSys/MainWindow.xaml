@@ -28,7 +28,7 @@
                         <Image Grid.Column="0" Grid.Row="0"
                                Width="80"
                                Height="60"
-                               Source="/Images/accountfansys.png" 
+                               Source="Images/accountfansys.png" 
                                VerticalAlignment="Center"
                                HorizontalAlignment="Left"
                                Margin="20,0,0,0"
@@ -50,25 +50,18 @@
                                              Margin="50,0,0,0"
                                              IsChecked="True"
                                              Height="70"
-                                             Width="200"
+                                             Width="300"
                                              Foreground="White"
                                              FontSize="16"
                                              Style="{StaticResource MenuButtonKey}"
                                              Command="{Binding HomeViewCommand}"/>
                                 
-                                <RadioButton Content="Reportes"
-                                             Height="70"
-                                             Width="200"
-                                             Foreground="White"
-                                             FontSize="16"
-                                             Style="{StaticResource MenuButtonKey}"
-                                             Command="{Binding AccountViewCommand}"/>
-                                
                                 <RadioButton Content="Catálogos"
                                              Height="70"
-                                             Width="200"
+                                             Width="300"
                                              Foreground="White"
                                              FontSize="16"
+                                             Command="{Binding CatalogViewCommand}"
                                              Style="{StaticResource MenuButtonKey}"/>
                         </StackPanel>
                         <ContentControl Grid.Row="1" Grid.Column="0"

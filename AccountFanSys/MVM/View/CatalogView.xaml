@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="AccountFanSys.MVM.View.CatalogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:AccountFanSys.MVM.View"
+             mc:Ignorable="d"
+             d:DesignHeight="530" d:DesignWidth="940"
+             Background="CornflowerBlue">
+    <Grid Margin="20,20,20,20">
+        <Grid.RowDefinitions>
+            <!-- Fila 1 (más estrecha) -->
+            <RowDefinition Height="100px" />
+            <!-- Fila 2 (más alta) -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <!-- Columna 1 (más estrecha) -->
+            <ColumnDefinition Width="*" />
+            <!-- Columna 2 (más ancha) -->
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- ComboBox en la fila 1 que ocupa dos columnas -->
+        <ComboBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="350px" Height="30px">
+            <!-- Aquí agregarías tus elementos para el ComboBox -->
+        </ComboBox>
+        
+        <!-- Elementos en la segunda fila y primera columna -->
+        <Button Content="Fila 2, Columna 1" Grid.Row="1" Grid.Column="0" />
+
+        <!-- Elementos en la segunda fila y segunda columna -->
+        <Button Content="Fila 2, Columna 2" Grid.Row="1" Grid.Column="1" />
+    </Grid>
+</UserControl>

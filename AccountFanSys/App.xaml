@@ -19,6 +19,10 @@
              <DataTemplate DataType="{x:Type viewModel:AccountViewModel}">
                  <view:AccountView></view:AccountView>
              </DataTemplate>
+             
+             <DataTemplate DataType="{x:Type viewModel:CatalogViewModel}">
+                 <view:CatalogView></view:CatalogView>
+             </DataTemplate>
          </ResourceDictionary>
     </Application.Resources>
 </Application>
