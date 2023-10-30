@@ -6,30 +6,48 @@
              xmlns:local="clr-namespace:AccountFanSys.MVM.View"
              mc:Ignorable="d"
              d:DesignHeight="530" d:DesignWidth="940"
-             Background="CornflowerBlue">
+             Background="LightSteelBlue">
     <Grid Margin="20,20,20,20">
         <Grid.RowDefinitions>
-            <!-- Fila 1 (más estrecha) -->
             <RowDefinition Height="100px" />
-            <!-- Fila 2 (más alta) -->
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <!-- Columna 1 (más estrecha) -->
             <ColumnDefinition Width="*" />
-            <!-- Columna 2 (más ancha) -->
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!-- ComboBox en la fila 1 que ocupa dos columnas -->
-        <ComboBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="350px" Height="30px">
-            <!-- Aquí agregarías tus elementos para el ComboBox -->
-        </ComboBox>
-        
-        <!-- Elementos en la segunda fila y primera columna -->
-        <Button Content="Fila 2, Columna 1" Grid.Row="1" Grid.Column="0" />
+        <Border Background="White" Margin="5" Width="200px" HorizontalAlignment="Left"
+                Height="40" VerticalAlignment="Top" CornerRadius="5">
+            <TextBlock Text="Añadir a catálogo" VerticalAlignment="Center" Margin="5" TextAlignment="Center"
+                       FontSize="18"/>
+        </Border>
 
-        <!-- Elementos en la segunda fila y segunda columna -->
-        <Button Content="Fila 2, Columna 2" Grid.Row="1" Grid.Column="1" />
+        <TextBlock Text="Seleccionar categoría" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" 
+                   HorizontalAlignment="Right"
+                   Margin="5"/>
+
+        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="categoryComboBox" Width="350px" Height="30px">
+            <ComboBoxItem>Empresa</ComboBoxItem>
+            <ComboBoxItem>Sucursal</ComboBoxItem>
+            <ComboBoxItem>Proveedor</ComboBoxItem>
+            <ComboBoxItem>Ciudad</ComboBoxItem>
+            <ComboBoxItem>Tipo de Movimiento</ComboBoxItem>
+            <ComboBoxItem>Tipo de Persona</ComboBoxItem>
+        </ComboBox>
+
+        <!-- Define campos de entrada (inputs) ocultos inicialmente -->
+        <TextBox x:Name="input1" Visibility="Hidden" Grid.Row="1" Grid.Column="0" Width="200" Height="20" Margin="0,-200,0,0"/>
+        <TextBox x:Name="input2" Visibility="Hidden" Grid.Row="2" Grid.Column="0" Width="200" Height="20" Margin="0,-150,0,0" />
+        <TextBox x:Name="input3" Visibility="Hidden" Grid.Row="3" Grid.Column="0" Width="200" Height="20" Margin="0,-100,0,0" />
+        <TextBox x:Name="input4" Visibility="Hidden" Grid.Row="4" Grid.Column="0" Width="200" Height="20" Margin="0,-50,0,0" />
+
+        <TextBox x:Name="input5" Visibility="Hidden" Grid.Row="1" Grid.Column="1" Width="200" Height="20" Margin="0,-200,0,0" />
+        <TextBox x:Name="input6" Visibility="Hidden" Grid.Row="2" Grid.Column="1" Width="200" Height="20" Margin="0,-150,0,0"  />
+        <TextBox x:Name="input7" Visibility="Hidden" Grid.Row="3" Grid.Column="1" Width="200" Height="20" Margin="0,-100,0,0"  />
+        <TextBox x:Name="input8" Visibility="Hidden" Grid.Row="4" Grid.Column="1" Width="200" Height="20" Margin="0,-50,0,0"  />
+
     </Grid>
 </UserControl>
+
+
