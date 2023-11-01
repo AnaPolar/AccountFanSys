@@ -23,11 +23,23 @@ public partial class CatalogView : UserControl
         // Configura la visibilidad de los campos de entrada según la selección
         switch (selectedIndex)
         {
-            case 0:
+            case 0: //empresa
                 ShowInputs(8);
                 break;
-            case 1:
+            case 1: //sucursal
                 ShowInputs(7);
+                break;
+            case 2: //proveedor
+                ShowInputs(7);
+                break;
+            case 3: //ciudad
+                ShowInputs(1);
+                break;
+            case 4: //movimiento
+                ShowInputs(1);
+                break;
+            case 5: //persona
+                ShowInputs(1);
                 break;
             // Agrega más casos según sea necesario para otras selecciones
             default:
