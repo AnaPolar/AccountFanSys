@@ -8,72 +8,72 @@ public partial class CatalogView : UserControl
     public CatalogView()
     {
         InitializeComponent();
-        // Suscribe el método de manejo de eventos al evento de selección cambiada del ComboBox
+        actionComboBox.SelectionChanged += ActionComboBox_SelectionChanged;
         categoryComboBox.SelectionChanged += CategoryComboBox_SelectionChanged;
+    }
+
+    private void ActionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (actionComboBox.SelectedIndex == 0)
+        {
+            dataTable.Visibility = Visibility.Collapsed;
+        }
+        else if (actionComboBox.SelectedIndex == 1)
+        {
+            dataTable.Visibility = Visibility.Visible;
+        }
+
+        // Reiniciar el ComboBox de categoría
+        categoryComboBox.SelectedIndex = -1; // Restablece el índice seleccionado
     }
     
     private void CategoryComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        // Obtiene el ComboBox seleccionado
-        ComboBox comboBox = (ComboBox)sender;
-
-        // Obtiene el índice seleccionado
-        int selectedIndex = comboBox.SelectedIndex;
-
-        // Configura la visibilidad de los campos de entrada según la selección
-        switch (selectedIndex)
+        if (categoryComboBox.SelectedIndex == 0)
         {
-            case 0: //empresa
-                ShowInputs(8);
-                break;
-            case 1: //sucursal
-                ShowInputs(7);
-                break;
-            case 2: //proveedor
-                ShowInputs(7);
-                break;
-            case 3: //ciudad
-                ShowInputs(1);
-                break;
-            case 4: //movimiento
-                ShowInputs(1);
-                break;
-            case 5: //persona
-                ShowInputs(1);
-                break;
-            // Agrega más casos según sea necesario para otras selecciones
-            default:
-                break;
+            inputsEnterprise1.Visibility = Visibility.Visible;
+            inputsEnterprise2.Visibility = Visibility.Visible;
+            inputsBranch1.Visibility = Visibility.Collapsed;
+            inputsBranch2.Visibility = Visibility.Collapsed;
+            inputsSupplier1.Visibility = Visibility.Collapsed;
+            inputsSupplier2.Visibility = Visibility.Collapsed;
+            inputNameOnly.Visibility = Visibility.Collapsed;
         }
-    }
-
-    private void ShowInputs(int count)
-    {
-        // Oculta todos los campos de entrada
-        HideAllInputs();
-
-        // Muestra la cantidad de campos de entrada especificada
-        for (int i = 1; i <= count; i++)
+        else if (categoryComboBox.SelectedIndex == 1)
         {
-            TextBox input = FindName($"input{i}") as TextBox;
-            if (input != null)
-            {
-                input.Visibility = Visibility.Visible;
-            }
+            inputsEnterprise1.Visibility = Visibility.Collapsed;
+            inputsEnterprise2.Visibility = Visibility.Collapsed;
+            inputsBranch1.Visibility = Visibility.Visible;
+            inputsBranch2.Visibility = Visibility.Visible;
+            inputsSupplier1.Visibility = Visibility.Collapsed;
+            inputsSupplier2.Visibility = Visibility.Collapsed;
+            inputNameOnly.Visibility = Visibility.Collapsed;
         }
-    }
-
-    private void HideAllInputs()
-    {
-        for (int i = 1; i <= 8; i++)
+        
+        else if (categoryComboBox.SelectedIndex == 2)
         {
-            TextBox input = FindName($"input{i}") as TextBox;
-            if (input != null)
-            {
-                input.Visibility = Visibility.Hidden;
-            }
+            inputsEnterprise1.Visibility = Visibility.Collapsed;
+            inputsEnterprise2.Visibility = Visibility.Collapsed;
+            inputsBranch1.Visibility = Visibility.Collapsed;
+            inputsBranch2.Visibility = Visibility.Collapsed;
+            inputsSupplier1.Visibility = Visibility.Visible;
+            inputsSupplier2.Visibility = Visibility.Visible;
+            inputNameOnly.Visibility = Visibility.Collapsed;
         }
+
+        else
+        {
+            inputsEnterprise1.Visibility = Visibility.Collapsed;
+            inputsEnterprise2.Visibility = Visibility.Collapsed;
+            inputsBranch1.Visibility = Visibility.Collapsed;
+            inputsBranch2.Visibility = Visibility.Collapsed;
+            inputsSupplier1.Visibility = Visibility.Collapsed;
+            inputsSupplier2.Visibility = Visibility.Collapsed;
+            inputNameOnly.Visibility = Visibility.Visible;
+        }
+        
     }
+    
     
     
     

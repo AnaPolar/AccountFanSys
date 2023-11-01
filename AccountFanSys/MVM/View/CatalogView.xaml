@@ -9,7 +9,8 @@
              Background="LightSteelBlue">
     <Grid Margin="20,20,20,20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100px" />
+            <RowDefinition Height="50px" />
+            <RowDefinition Height="80px" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -17,17 +18,16 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Border Background="White" Margin="5" Width="200px" HorizontalAlignment="Left"
-                Height="40" VerticalAlignment="Top" CornerRadius="5">
-            <TextBlock Text="Añadir a catálogo" VerticalAlignment="Center" Margin="5" TextAlignment="Center"
-                       FontSize="18"/>
-        </Border>
+        <ComboBox Margin="5" Width="200px" HorizontalAlignment="Left"
+                  Height="30" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" x:Name="actionComboBox">
+            <ComboBoxItem>Añadir a catálogo</ComboBoxItem>
+            <ComboBoxItem>Revisar catálogo</ComboBoxItem>
+        </ComboBox>
 
-        <TextBlock Text="Seleccionar categoría" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" 
-                   HorizontalAlignment="Right"
-                   Margin="5"/>
+        <TextBlock Text="Seleccionar categoría" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"
+                   HorizontalAlignment="Right" Margin="5" />
 
-        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="categoryComboBox" Width="350px" Height="30px">
+        <ComboBox Grid.Row="1" Grid.Column="1" x:Name="categoryComboBox" Width="350px" Height="30px">
             <ComboBoxItem>Empresa</ComboBoxItem>
             <ComboBoxItem>Sucursal</ComboBoxItem>
             <ComboBoxItem>Proveedor</ComboBoxItem>
@@ -35,19 +35,168 @@
             <ComboBoxItem>Tipo de Movimiento</ComboBoxItem>
             <ComboBoxItem>Tipo de Persona</ComboBoxItem>
         </ComboBox>
+        
+        <!-- Empresa -->
 
-        <!-- Define campos de entrada (inputs) ocultos inicialmente -->
-        <TextBox x:Name="input1" Visibility="Hidden" Grid.Row="1" Grid.Column="0" Width="200" Height="20" Margin="0,-200,0,0"/>
-        <TextBox x:Name="input2" Visibility="Hidden" Grid.Row="2" Grid.Column="0" Width="200" Height="20" Margin="0,-150,0,0" />
-        <TextBox x:Name="input3" Visibility="Hidden" Grid.Row="3" Grid.Column="0" Width="200" Height="20" Margin="0,-100,0,0" />
-        <TextBox x:Name="input4" Visibility="Hidden" Grid.Row="4" Grid.Column="0" Width="200" Height="20" Margin="0,-50,0,0" />
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Name="inputsEnterprise1" Visibility="Collapsed">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" /> <!-- Columna para TextBlocks -->
+                <ColumnDefinition Width="200" /> <!-- Columna para TextBoxes -->
+            </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="input5" Visibility="Hidden" Grid.Row="1" Grid.Column="1" Width="200" Height="20" Margin="0,-200,0,0" />
-        <TextBox x:Name="input6" Visibility="Hidden" Grid.Row="2" Grid.Column="1" Width="200" Height="20" Margin="0,-150,0,0"  />
-        <TextBox x:Name="input7" Visibility="Hidden" Grid.Row="3" Grid.Column="1" Width="200" Height="20" Margin="0,-100,0,0"  />
-        <TextBox x:Name="input8" Visibility="Hidden" Grid.Row="4" Grid.Column="1" Width="200" Height="20" Margin="0,-50,0,0"  />
+            <!-- Primer par TextBlock y TextBox -->
+            <TextBlock Text="Nombre" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="50,-200,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-200,0,0" />
 
+            <!-- Segundo par TextBlock y TextBox -->
+            <TextBlock Text="Razón Social" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-100,0,0" />
+
+            <TextBlock Text="Dirección" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,0,0,0" />
+            
+            <TextBlock Text="Nombre del encargado" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,100,0,0" />
+
+        </Grid>
+        
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Name="inputsEnterprise2" Visibility="Collapsed">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" /> <!-- Columna para TextBlocks -->
+                <ColumnDefinition Width="200" /> <!-- Columna para TextBoxes -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Primer par TextBlock y TextBox -->
+            <TextBlock Text="Teléfono" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="50,-200,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-200,0,0" />
+
+            <!-- Segundo par TextBlock y TextBox -->
+            <TextBlock Text="Correo Electrónico" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-100,0,0" />
+
+            <TextBlock Text="Estado" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,0,0,0" />
+            
+            <TextBlock Text="Estado Tipo" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,100,0,0" />
+
+        </Grid>
+        
+        <!-- Sucursal -->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Name="inputsBranch1" Visibility="Collapsed">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" /> <!-- Columna para TextBlocks -->
+                <ColumnDefinition Width="200" /> <!-- Columna para TextBoxes -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Primer par TextBlock y TextBox -->
+            <TextBlock Text="Nombre" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="50,-200,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-200,0,0" />
+
+            <!-- Segundo par TextBlock y TextBox -->
+            <TextBlock Text="Dirección" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-100,0,0" />
+
+            <TextBlock Text="Empresa" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,0,0,0" />
+            
+        </Grid>
+        
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Name="inputsBranch2" Visibility="Collapsed">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" /> <!-- Columna para TextBlocks -->
+                <ColumnDefinition Width="200" /> <!-- Columna para TextBoxes -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Primer par TextBlock y TextBox -->
+            <TextBlock Text="Teléfono" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="50,-200,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-200,0,0" />
+
+            <!-- Segundo par TextBlock y TextBox -->
+            <TextBlock Text="Correo Electrónico" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-100,0,0" />
+
+            <TextBlock Text="Estado" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,0,0,0" />
+        </Grid>
+        
+        <!-- Proveedor -->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Name="inputsSupplier1" Visibility="Collapsed">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" /> <!-- Columna para TextBlocks -->
+                <ColumnDefinition Width="200" /> <!-- Columna para TextBoxes -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Primer par TextBlock y TextBox -->
+            <TextBlock Text="Nombre" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="50,-200,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-200,0,0" />
+
+            <!-- Segundo par TextBlock y TextBox -->
+            <TextBlock Text="RFC" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-100,0,0" />
+
+            <TextBlock Text="Dirección" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,0,0,0" />
+            
+            <TextBlock Text="Nombre de contacto" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,100,0,0" />
+            
+        </Grid>
+        
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Name="inputsSupplier2" Visibility="Collapsed">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" /> <!-- Columna para TextBlocks -->
+                <ColumnDefinition Width="200" /> <!-- Columna para TextBoxes -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Primer par TextBlock y TextBox -->
+            <TextBlock Text="Tipo de persona" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="50,-200,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-200,0,0" />
+
+            <!-- Segundo par TextBlock y TextBox -->
+            <TextBlock Text="Teléfono" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,-100,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,-100,0,0" />
+
+            <TextBlock Text="Correo Electrónico" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" />
+            <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,0,0,0" />
+        </Grid>
+        
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="inputNameOnly" Visibility="Collapsed">
+            <TextBlock Text="Nombre" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-100,0,0" />
+            <TextBox Width="200" Height="20" Margin="0,0,0,0" />
+        </Grid>
+
+            <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="dataTable" AutoGenerateColumns="True" Visibility="Collapsed">
+        </DataGrid>
     </Grid>
 </UserControl>
-
-
