@@ -27,13 +27,13 @@
         <TextBlock Text="Seleccionar categoría" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"
                    HorizontalAlignment="Right" Margin="5" />
 
-        <ComboBox Grid.Row="1" Grid.Column="1" x:Name="categoryComboBox" Width="350px" Height="30px">
-            <ComboBoxItem>Empresa</ComboBoxItem>
+        <ComboBox Grid.Row="1" Grid.Column="1" x:Name="categoryComboBox" Width="350px" Height="3w0px">
+            <!-- <ComboBoxItem>Empresa</ComboBoxItem>
             <ComboBoxItem>Sucursal</ComboBoxItem>
             <ComboBoxItem>Proveedor</ComboBoxItem>
             <ComboBoxItem>Ciudad</ComboBoxItem>
             <ComboBoxItem>Tipo de Movimiento</ComboBoxItem>
-            <ComboBoxItem>Tipo de Persona</ComboBoxItem>
+            <ComboBoxItem>Tipo de Persona</ComboBoxItem> -->
         </ComboBox>
         
         <!-- Empresa -->
