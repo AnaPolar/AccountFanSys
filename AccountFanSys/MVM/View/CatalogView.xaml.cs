@@ -34,7 +34,7 @@ public partial class CatalogView : UserControl
                         {
                             // Agregar cada elemento de la consulta al ComboBox
                             string nombre = reader.GetString(0);
-                            actionComboBox.Items.Add(nombre);
+                            categoryComboBox.Items.Add(nombre);
                         }
                     }
                 }

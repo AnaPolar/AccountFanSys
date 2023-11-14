@@ -29,4 +29,6 @@ public partial class HomeView : UserControl
         // Cierra la ventana emergente sin guardar cambios
         UtilidadPopup.IsOpen = false;
     }
+    
+    
 }
