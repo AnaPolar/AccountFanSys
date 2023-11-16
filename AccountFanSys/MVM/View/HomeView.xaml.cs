@@ -31,4 +31,25 @@ public partial class HomeView : UserControl
     }
     
     
+    // Manejador de evento para el clic en el botón "Nuevo Registro"
+    private void NuevoRegistroButton_Click(object sender, RoutedEventArgs e)
+    {
+        // Crea una nueva instancia de la ventana
+        FechaRegistro nuevaVentana = new FechaRegistro();
+
+        // Muestra la ventana
+        nuevaVentana.ShowDialog();
+    }
+
+    // Manejador de evento para el clic en el botón "Nuevo Registro"
+    private void NuevaVentaButton_Click(object sender, RoutedEventArgs e)
+    {
+        // Crea una nueva instancia de la ventana
+        NuevaVenta nuevaVenta = new NuevaVenta();
+
+        // Muestra la ventana
+        nuevaVenta.ShowDialog();
+    }
+    
 }
+

@@ -47,7 +47,7 @@
                   Grid.Column="0" Grid.ColumnSpan="2"
         />
         
-        <Button Content="Nuevo Registro" Height="50px" Width="120px" Margin="0, 50,0,0">
+        <Button Content="Nuevo Registro" Height="50px" Width="120px" Margin="0, 50,0,0" Click="NuevoRegistroButton_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -63,7 +63,7 @@
             </Button.Style>
         </Button>
         
-        <Button Content="Nueva Venta" Height="30px" Width="120px" Margin="0, 40,0,0">
+        <Button Content="Nueva Venta" Height="30px" Width="120px" Margin="0, 40,0,0" Click="NuevaVentaButton_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">

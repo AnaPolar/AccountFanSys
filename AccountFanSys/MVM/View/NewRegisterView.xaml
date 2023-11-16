@@ -1,0 +1,82 @@
+﻿<Window x:Class="AccountFanSys.MVM.View.NewRegisterView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:AccountFanSys.MVM.View"
+        mc:Ignorable="d"
+        Title="NewRegisterView" Height="350" Width="800" Background="LightSteelBlue" ResizeMode="NoResize">
+<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Sección izquierda -->
+        <StackPanel Grid.Column="0" Margin="10">
+            <!-- Etiqueta "Nuevo Registro" con fondo azul oscuro -->
+            <Label Content="Nuevo Registro" Background="#001F3F" Foreground="White" Padding="5" Margin="0,0,0,10"/>
+            
+            <!-- Primer conjunto de Label e Input -->
+            <StackPanel>
+                <Label Content="Número de factura" />
+                <TextBox Width="150" />
+            </StackPanel>
+
+            <!-- Segundo conjunto de Label e Input (ComboBox) -->
+            <StackPanel>
+                <Label Content="Concepto" />
+                <TextBox Width="150" />
+            </StackPanel>
+
+            <!-- Tercer conjunto de Label e Input (ComboBox) -->
+            <StackPanel>
+                <Label Content="Proveedor" />
+                <ComboBox Width="150">
+                    <ComboBoxItem>Item 1</ComboBoxItem>
+                    <ComboBoxItem>Item 2</ComboBoxItem>
+                    <ComboBoxItem>Item 3</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Sección derecha -->
+        <StackPanel Grid.Column="1" Margin="10">
+            <!-- Label "Fecha" y TextBlock para mostrar la fecha -->
+            <StackPanel>
+                <Label Content="Fecha" />
+                <TextBlock Width="150" Background="LightGray" Padding="5" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <!-- Cuarto conjunto de Label e Input (ComboBox) -->
+            <StackPanel>
+                <Label Content="Tipo de movimiento" />
+                <ComboBox Width="150">
+                    <ComboBoxItem>Item A</ComboBoxItem>
+                    <ComboBoxItem>Item B</ComboBoxItem>
+                    <ComboBoxItem>Item C</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- Quinto conjunto de Label e Input (TextBox) -->
+            <StackPanel>
+                <Label Content="Devolución"/>
+                <TextBox Width="150" />
+            </StackPanel>
+
+            <!-- Sexto conjunto de Label e Input (TextBox) -->
+            <StackPanel>
+                <Label Content="Importe" />
+                <TextBox Width="150" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Botones al final de la ventana -->
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,0">
+            <Button Content="Cancelar" Width="80" Height="30" Margin="10"/>
+            <Button Content="Registros temporales" Width="160" Height="30" Margin="10"/>
+            <Button Content="Registrar" Width="80" Height="30" Margin="10"/>
+            <Button Content="Guardar" Width="80" Height="30" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
