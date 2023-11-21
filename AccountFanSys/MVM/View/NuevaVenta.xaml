@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:AccountFanSys.MVM.View"
         mc:Ignorable="d"
-        Title="Nueva Venta" Width="900" Height="300" Background="LightSteelBlue" ResizeMode="NoResize">
+        Title="Nueva Venta" Width="900" Height="350" Background="LightSteelBlue" ResizeMode="NoResize">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />

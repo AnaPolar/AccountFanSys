@@ -29,7 +29,7 @@
                 <ComboBoxItem Content="Empresa 2"/>
                 <ComboBoxItem Content="Empresa 3"/>
             </ComboBox>
-            <Button Content="Guardar" Width="100" Height="30"/>
+            <Button Content="Guardar" Width="100" Height="30" Click="Save_OnClick"/>
         </StackPanel>
     </Grid>
 </Window>

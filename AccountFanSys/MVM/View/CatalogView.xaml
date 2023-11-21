@@ -35,8 +35,6 @@
             <ComboBoxItem>Tipo de Movimiento</ComboBoxItem>
             <ComboBoxItem>Tipo de Persona</ComboBoxItem> -->
         </ComboBox>
-        
-        <!-- Empresa -->
 
         <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Name="inputsEnterprise1" Visibility="Collapsed">
             <Grid.Resources>

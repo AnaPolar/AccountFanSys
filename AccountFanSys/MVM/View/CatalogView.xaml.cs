@@ -25,7 +25,7 @@ public partial class CatalogView : UserControl
             {
                 connection.Open();
 
-                string query = "SELECT nombre FROM catalogos ORDER BY nombre";
+                string query = "SELECT nombre FROM catalogos ORDER BY idcatalogos ASC";
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -73,6 +73,39 @@ public partial class CatalogView : UserControl
         {
             inputsEnterprise1.Visibility = Visibility.Collapsed;
             inputsEnterprise2.Visibility = Visibility.Collapsed;
+            inputsBranch1.Visibility = Visibility.Collapsed;
+            inputsBranch2.Visibility = Visibility.Collapsed;
+            inputsSupplier1.Visibility = Visibility.Collapsed;
+            inputsSupplier2.Visibility = Visibility.Collapsed;
+            inputNameOnly.Visibility = Visibility.Visible;
+        }
+        
+        else if (categoryComboBox.SelectedIndex == 2)
+        {
+            inputsEnterprise1.Visibility = Visibility.Collapsed;
+            inputsEnterprise2.Visibility = Visibility.Collapsed;
+            inputsBranch1.Visibility = Visibility.Collapsed;
+            inputsBranch2.Visibility = Visibility.Collapsed;
+            inputsSupplier1.Visibility = Visibility.Collapsed;
+            inputsSupplier2.Visibility = Visibility.Collapsed;
+            inputNameOnly.Visibility = Visibility.Visible;
+        }
+
+        else if (categoryComboBox.SelectedIndex == 3)
+        {
+            inputsEnterprise1.Visibility = Visibility.Collapsed;
+            inputsEnterprise2.Visibility = Visibility.Collapsed;
+            inputsBranch1.Visibility = Visibility.Collapsed;
+            inputsBranch2.Visibility = Visibility.Collapsed;
+            inputsSupplier1.Visibility = Visibility.Collapsed;
+            inputsSupplier2.Visibility = Visibility.Collapsed;
+            inputNameOnly.Visibility = Visibility.Visible;
+        }
+        
+        else if (categoryComboBox.SelectedIndex == 4)
+        {
+            inputsEnterprise1.Visibility = Visibility.Collapsed;
+            inputsEnterprise2.Visibility = Visibility.Collapsed;
             inputsBranch1.Visibility = Visibility.Visible;
             inputsBranch2.Visibility = Visibility.Visible;
             inputsSupplier1.Visibility = Visibility.Collapsed;
@@ -80,7 +113,7 @@ public partial class CatalogView : UserControl
             inputNameOnly.Visibility = Visibility.Collapsed;
         }
         
-        else if (categoryComboBox.SelectedIndex == 2)
+        else if (categoryComboBox.SelectedIndex == 5)
         {
             inputsEnterprise1.Visibility = Visibility.Collapsed;
             inputsEnterprise2.Visibility = Visibility.Collapsed;
@@ -90,8 +123,19 @@ public partial class CatalogView : UserControl
             inputsSupplier2.Visibility = Visibility.Visible;
             inputNameOnly.Visibility = Visibility.Collapsed;
         }
-
-        else
+        
+        else if (categoryComboBox.SelectedIndex == 6)
+        {
+            inputsEnterprise1.Visibility = Visibility.Collapsed;
+            inputsEnterprise2.Visibility = Visibility.Collapsed;
+            inputsBranch1.Visibility = Visibility.Collapsed;
+            inputsBranch2.Visibility = Visibility.Collapsed;
+            inputsSupplier1.Visibility = Visibility.Collapsed;
+            inputsSupplier2.Visibility = Visibility.Collapsed;
+            inputNameOnly.Visibility = Visibility.Visible;
+        }
+        
+        else if (categoryComboBox.SelectedIndex == 7)
         {
             inputsEnterprise1.Visibility = Visibility.Collapsed;
             inputsEnterprise2.Visibility = Visibility.Collapsed;

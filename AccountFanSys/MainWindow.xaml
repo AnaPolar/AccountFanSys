@@ -7,11 +7,10 @@
         xmlns:local="clr-namespace:AccountFanSys"
         xmlns:viewModel="clr-namespace:AccountFanSys.MVM.ModelView"
         mc:Ignorable="d"
-        Height="600" Width="940"
-        WindowStyle="none"
+        Height="630" Width="940"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="True">
+        >
 
         <Window.DataContext>
                 <viewModel:MainViewModel></viewModel:MainViewModel>
