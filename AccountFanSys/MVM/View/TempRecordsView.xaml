@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="TempRecordsView" Height="450" Width="800"
         Background="Lavender"
-        WindowStyle="None"
         >
 
         <Grid>

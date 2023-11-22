@@ -62,22 +62,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        
-        <Button Content="Nueva Venta" Height="30px" Width="120px" Margin="0, 40,0,0" Click="NuevaVentaButton_Click">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="Button">
-                                <Border Background="LightBlue" BorderBrush="DarkBlue" BorderThickness="1" CornerRadius="10">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Style>
-        </Button>
+
     </StackPanel>
         
        

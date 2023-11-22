@@ -76,7 +76,7 @@
             <Button Content="Cancelar" Width="80" Height="30" Margin="10"/>
             <Button Content="Registros temporales" Width="160" Height="30" Margin="10" Click="TemptRecords_OnClick"/>
             <Button Content="Registrar" Width="80" Height="30" Margin="10"/>
-            <Button Content="Guardar" Width="80" Height="30" Margin="10"/>
+            <Button Content="Guardar" Width="80" Height="30" Margin="10" Click="NuevaVentaButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
