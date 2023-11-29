@@ -87,7 +87,6 @@
             
             <TextBlock Text="Estado Tipo" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,100,10,0" />
             <TextBox Width="200" Height="20" Grid.Column="1" Margin="0,100,0,0" />
-
         </Grid>
         
         <!-- Sucursal -->
