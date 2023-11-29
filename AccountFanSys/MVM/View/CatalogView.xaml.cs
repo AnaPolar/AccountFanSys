@@ -149,8 +149,6 @@ public partial class CatalogView : UserControl
     }
     
     
-    
-    
 }
 
 
