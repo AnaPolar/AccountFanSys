@@ -40,8 +40,7 @@ public partial class CatalogView : UserControl
                 }
             }
         }
-    
-
+        
     private void ActionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (actionComboBox.SelectedIndex == 0)
