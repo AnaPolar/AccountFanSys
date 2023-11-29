@@ -193,7 +193,11 @@
             <TextBox Width="200" Height="20" Margin="0,0,0,0" />
         </Grid>
 
-            <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="dataTable" AutoGenerateColumns="True" Visibility="Collapsed">
+        <Grid Grid.Row="2" Grid.Column="1" Visibility="Collapsed" Name="SaveButton">
+            <Button Content="Guardar" Width="80" Height="30" Margin="0,280,0,0"/>
+        </Grid>    
+        
+        <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="dataTable" AutoGenerateColumns="True" Visibility="Collapsed">
         </DataGrid>
     </Grid>
 </UserControl>

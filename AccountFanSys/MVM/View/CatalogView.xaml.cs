@@ -67,6 +67,7 @@ public partial class CatalogView : UserControl
             inputsSupplier1.Visibility = Visibility.Collapsed;
             inputsSupplier2.Visibility = Visibility.Collapsed;
             inputNameOnly.Visibility = Visibility.Collapsed;
+            SaveButton.Visibility = Visibility.Visible;
         }
         else if (categoryComboBox.SelectedIndex == 1)
         {
@@ -77,6 +78,7 @@ public partial class CatalogView : UserControl
             inputsSupplier1.Visibility = Visibility.Collapsed;
             inputsSupplier2.Visibility = Visibility.Collapsed;
             inputNameOnly.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Visible;
         }
         
         else if (categoryComboBox.SelectedIndex == 2)
@@ -88,6 +90,7 @@ public partial class CatalogView : UserControl
             inputsSupplier1.Visibility = Visibility.Collapsed;
             inputsSupplier2.Visibility = Visibility.Collapsed;
             inputNameOnly.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Visible;
         }
 
         else if (categoryComboBox.SelectedIndex == 3)
@@ -99,6 +102,7 @@ public partial class CatalogView : UserControl
             inputsSupplier1.Visibility = Visibility.Collapsed;
             inputsSupplier2.Visibility = Visibility.Collapsed;
             inputNameOnly.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Visible;
         }
         
         else if (categoryComboBox.SelectedIndex == 4)
@@ -110,6 +114,7 @@ public partial class CatalogView : UserControl
             inputsSupplier1.Visibility = Visibility.Collapsed;
             inputsSupplier2.Visibility = Visibility.Collapsed;
             inputNameOnly.Visibility = Visibility.Collapsed;
+            SaveButton.Visibility = Visibility.Visible;
         }
         
         else if (categoryComboBox.SelectedIndex == 5)
@@ -121,6 +126,7 @@ public partial class CatalogView : UserControl
             inputsSupplier1.Visibility = Visibility.Visible;
             inputsSupplier2.Visibility = Visibility.Visible;
             inputNameOnly.Visibility = Visibility.Collapsed;
+            SaveButton.Visibility = Visibility.Visible;
         }
         
         else if (categoryComboBox.SelectedIndex == 6)
@@ -132,6 +138,7 @@ public partial class CatalogView : UserControl
             inputsSupplier1.Visibility = Visibility.Collapsed;
             inputsSupplier2.Visibility = Visibility.Collapsed;
             inputNameOnly.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Visible;
         }
         
         else if (categoryComboBox.SelectedIndex == 7)
@@ -143,6 +150,7 @@ public partial class CatalogView : UserControl
             inputsSupplier1.Visibility = Visibility.Collapsed;
             inputsSupplier2.Visibility = Visibility.Collapsed;
             inputNameOnly.Visibility = Visibility.Visible;
+            SaveButton.Visibility = Visibility.Visible;
         }
         
     }
