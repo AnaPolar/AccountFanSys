@@ -17,6 +17,8 @@
       <Resource Include="Images\accountfansys.png" />
       <None Remove="Images\configuraciones.png" />
       <Resource Include="Images\configuraciones.png" />
+      <None Remove="Images\fondo_accountfansys.jpg" />
+      <Resource Include="Images\fondo_accountfansys.jpg" />
     </ItemGroup>
 
     <ItemGroup>

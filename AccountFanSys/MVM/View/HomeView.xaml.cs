@@ -42,7 +42,5 @@ public partial class HomeView : UserControl
     }
 
     // Manejador de evento para el clic en el botón "Nuevo Registro"
-    
-    
 }
 

@@ -73,7 +73,7 @@
 
         <!-- Botones al final de la ventana -->
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,0">
-            <Button Content="Cancelar" Width="80" Height="30" Margin="10"/>
+            <Button Content="Cancelar" Width="80" Height="30" Margin="10" Click="Cancelar_Click"/>
             <Button Content="Registros temporales" Width="160" Height="30" Margin="10" Click="TemptRecords_OnClick"/>
             <Button Content="Registrar" Width="80" Height="30" Margin="10"/>
             <Button Content="Guardar" Width="80" Height="30" Margin="10" Click="NuevaVentaButton_Click"/>

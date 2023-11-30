@@ -5,6 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:AccountFanSys.MVM.View"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Nueva Venta" Width="900" Height="350" Background="LightSteelBlue" ResizeMode="NoResize">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -55,8 +56,8 @@
                 </StackPanel>
                 
                 <StackPanel Margin="0,20,0,0">
-                    <Button Content="Guardar" Width="100" Height="30" Margin="0,0,0,5"/>
-                    <Button Content="Cancelar" Width="100" Height="30"/>
+                    <Button Content="Guardar" Width="100" Height="30" Margin="0,0,0,5" Click="Guardar_Click"/>
+                    <Button Content="Cancelar" Width="100" Height="30" Click="Cancelar_Click"/>
                 </StackPanel>
             </StackPanel>
             
