@@ -124,7 +124,7 @@
             
             <StackPanel Grid.Row="1" Background="Transparent" Margin="350,-50,0,0" HorizontalAlignment="Left" Width="300px">
                 
-                <Button  HorizontalAlignment="Left" Margin="40,15,0,0" Name="UtilidadButton" Click="UtilidadButton_Click" Width="30" Height="3 0">
+                <Button  HorizontalAlignment="Left" Margin="40,15,0,0" Name="UtilidadButton" Click="UtilidadButton_Click" Width="30" Height="30">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/../Images/configuraciones.png" Width="20" Height="20"/>
                     </StackPanel>
